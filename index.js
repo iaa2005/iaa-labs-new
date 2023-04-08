@@ -13,10 +13,16 @@ $(document).ready(async function() {
     })
 
     $(document).on("scroll", function () {
-        if ($(document).scrollTop() >= 200) {
-            $("header").css("background-color", "var(--secondary-color)");
+        if ($(document).scrollTop() >= 240) {
+            // $("header").css("background-color", "var(--secondary-color)");
+            $(":root").css("--header-secondary", "var(--header-secondary-scroll-color)")
+            $(":root").css("--header-primary", "var(--header-primary-scroll-color)")
         } else {
-            $("header").css("background-color", "transparent");
+            // $("header").css("background-color", "var(--header-secondary-top-color)");
+            $(":root").css("--header-secondary", "var(--header-secondary-top-color)")
+            $(":root").css("--header-primary", "var(--header-primary-top-color)")
+
+
         }
     })
 

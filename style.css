@@ -1,8 +1,16 @@
 :root {
     --font: 'Raleway', sans-serif;
-    --primary-color: white;
-    --secondary-color: black;
-    --secondary-color-2: black;
+    --primary-color: rgb(255, 255, 255);
+    --primary-color-invert: rgb(255, 255, 255);
+    --secondary-color: rgb(0, 0, 0);
+    --secondary-color-footer: rgb(0, 0, 0);
+    --header-primary-top-color: rgb(255, 255, 255);
+    --header-primary-scroll-color: rgb(255, 255, 255);
+    --header-secondary-top-color: rgba(0, 0, 0, 0);
+    --header-secondary-scroll-color: rgb(0, 0, 0);
+
+    --header-primary: var(--header-primary-top-color);
+    --header-secondary: var(--header-secondary-top-color);
 }
 
 html {
@@ -32,7 +40,9 @@ header {
     z-index: 1;
     gap: 52px;
     justify-content: space-between;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--header-primary);
+    background-color: var(--header-secondary);
 }
 
 .header-in-2 {
@@ -48,10 +58,10 @@ header {
     cursor: auto;
 }
 
-.header-in-2 a img,
 .header-in-2 a svg {
     width: 24px;
-    fill: var(--primary-color);
+    transition: fill 0.3s;
+    fill: var(--header-primary);
 }
 
 .header-menu {
@@ -62,6 +72,8 @@ header {
 
 .menu-text {
     border-bottom: 1px solid transparent;
+    transition: color 0.3s;
+    color: var(--header-primary);
 }
 
 .menu-text:hover {
@@ -78,17 +90,22 @@ header {
 .logo-img {
     max-width: 130px;
     display: block;
-    fill: var(--primary-color);
+}
+.logo-img path {
+    transition: fill 0.3s;
+    fill: var(--header-primary);
 }
 
 .intro-div {
     height: 100vh;
+    min-height: 640px;
     width: -webkit-fill-available;
 }
 
 .video-intro-bg {
     width: 100vw;
     height: 100vh;
+    min-height: 640px;
     max-width: 1504px;
     object-fit: cover;
 }
@@ -101,6 +118,7 @@ header {
     max-width: calc(1504px - 64px);
     background-color: rgba(0, 0, 0, 0.15);
     height: calc(100vh - 100px);
+    min-height: 540px;
     padding: 60px 32px 40px 32px;
     font-weight: 300;
     flex-direction: column;
@@ -117,12 +135,14 @@ header {
     margin-bottom: 0;
     font-weight: 600;
     font-size: 48px;
+    color: var(--primary-color-invert)
 }
 
 .intro-text-in h2 {
     margin: 20px 0px;
     font-weight: 400;
     font-size: 24px;
+    color: var(--primary-color-invert)
 }
 
 button {
@@ -140,6 +160,19 @@ button:hover {
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+.invert-btn {
+    border: 2px solid var(--primary-color-invert);
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--primary-color-invert);
+}
+
+.invert-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-invert);
+    color: var(--primary-color);
 }
 
 .pause-btn {
@@ -165,6 +198,7 @@ button:hover {
 .docs-div {
     max-width: calc(1504px - 64px);
     padding: 32px;
+    padding-bottom: 64px;
 }
 
 .header-docs {
@@ -277,7 +311,9 @@ footer {
     max-width: calc(1504px - 64px);
     padding: 32px;
     padding-top: 64px;
-    margin-top: 64px;
+    padding-bottom: 64px;
+    background-color: var(--secondary-color-footer);
+    margin: 64px 0px 0px 0px;
 }
 
 footer .rule {
@@ -359,7 +395,7 @@ footer .rule {
 }
 
 .bg-primary {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-footer);
 }
 
 .bg-primary-2 {
