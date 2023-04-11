@@ -484,7 +484,7 @@ button:hover {
 }
 
 .mobile-menu .header-in-2 {
-    margin-top: auto;
+    margin-top: 54px;
 }
 
 .logo-href-and-logo {
@@ -499,10 +499,15 @@ button:hover {
     fill: var(--header-primary-scroll-color);
 }
 
+.mobile-menu .header-in-2 a svg {
+    width: 32px;
+}
+
 .mobile-menu .menu-text {
     border-bottom: 1px solid transparent;
     transition: color 0.3s;
     color: var(--header-primary-scroll-color);
+    font-size: 24px;
 }
 
 .mobile-menu .menu-text:hover {
@@ -722,4 +727,10 @@ button:hover {
         display: block;
     }
 
+    .header-intro div h1 {
+        font-size: 42px;
+    }
+    .header-intro div h1 {
+        font-size: 21px;
+    }
 }
