@@ -20,92 +20,96 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/index.js"></script>
+    <style>
+        :root {
+            --font: 'Raleway', sans-serif;
+
+            --primary-color: rgb(12 34 39);
+            --primary-color-footer: rgb(202 255 85);
+            --primary-color-invert: rgb(255 255 255);
+            --secondary-color: rgb(255 255 255);
+            --secondary-color-footer: rgb(12 34 39);
+            --header-primary-scroll-color: rgb(12 34 39);
+            --header-primary-top-color: rgb(202 255 85);
+            --header-secondary-scroll-color: rgb(255 255 255);
+            --header-secondary-top-color: rgb(12 34 39);
+
+            --header-primary: var(--header-primary-top-color);
+            --header-secondary: var(--header-secondary-top-color);
+        }
+    </style>
 </head>
 
 <body>
     <header>
     </header>
-
-    <div class="intro-div">
-        <video class="video-intro-bg" id="video-intro-bg" src="/videos/intro-2.mp4" autoplay loop muted
-            playsinline></video>
-        <div class="intro-text">
-            <div class="intro-text-in">
-                <h1>Передаем знания и делаем открытия для будущего поколения</h1>
-                <h2>Теперь любой имеет доступ к знаниям, открытиям, технологиям и патентам. Сделайте мир лучше.</h2>
-                <div style="display: flex; justify-content: space-between;">
-                    <a href="/about"><button class="invert-btn">О компании</button></a>
-                    <button class="pause-btn" id="pause-btn">На паузу</button>
-                </div>
-            </div>
-        </div>
+    <div style="height: 64px; width: -webkit-fill-available; background-color: var(--header-secondary-top-color);">
     </div>
 
-    <div class="project-div">
-        <!-- <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f3cd0a153241411.632c12d7ee298.jpg"> -->
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7121f8140116479.623b95ab572f9.jpg">
-        <div class="project-div-text">
-            <h1>В поисках будущего</h1>
-            <div class="rule"></div>
-            <span>
-                Для того чтобы сделать мир лучше и создать благоприятное будущее, необходимо продолжать передавать
-                знания и делать новые открытия. Для этого важно развивать науку и технологии, поддерживать образование и
-                научные исследования, а также привлекать талантливых ученых, изобретателей и инноваторов.
-
-                Одним из ключевых способов содействия научному развитию и передаче знаний является обеспечение
-                доступности научных статей, публикаций и другой информации, которая может помочь ученым и исследователям
-                в их работе.
-            </span>
-            <button class="white-btn">В будущее</button>
+    <div class="header-intro">
+        <div>
+            <h1>Исследования</h1>
+            <h2>Наши научные исследования интересны, и они созданы для проведения экспериментов и получения знаний.</h2>
         </div>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/16559d38225237.57598180de392.jpg">
     </div>
 
-    <div class="docs-div">
+    <!-- <div class="docs-div">
         <div class="header-docs">
-            <h1>Астрономия</h1>
-            <span>Статьи по астрономии, астрофизике для получения образования и подготовки к олимпиадам.</span>
+            <h1>Астрономия/Астрофизика</h1>
+            <span>Задачи по астрономии, астрофизике для получения образования и подготовки к олимпиадам.</span>
         </div>
         <div class="rule"></div>
         <div class="docs-menu">
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c47e1f157230631.63751b5e8870f.png">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/825186155127321.634edc310fb6c.png">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4714e3149253155.62e3d4322a281.png">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2abe38155127321.634edc311243d.png">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
         </div>
-        <a href="/astronomy">
-            <button class="white-btn">Еще статьи</button>
-        </a>
+        <button class="white-btn">Еще задания</button>
     </div>
 
     <div class="project-div">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6e70d2161921551.63cd776302f20.jpg">
+        <img src="/images/thechs.png">
         <div class="project-div-text">
-            <h1>Бесценные знания</h1>
+            <h1>Бесценные патенты будущего</h1>
             <div class="rule"></div>
             <span>
                 Компания имеет патенты на новые технологии, которые могут помочь улучшить жизнь людей в различных
@@ -118,66 +122,79 @@
                 растения. Организация имеет большой потенциал для создания технологий, которые могут значительно
                 улучшить качество жизни людей в различных отраслях.
             </span>
-            <a href="/research"><button class="white-btn">Наши исследования</button></a>
+            <button class="white-btn">О патентах</button>
         </div>
     </div>
 
     <div class="docs-div">
         <div class="header-docs">
-            <h1>Физика</h1>
+            <h1>Технологии</h1>
             <span>Разработанные новые технологии для транспорта, жизнеобеспечения, ракетостроения и вооружения.</span>
         </div>
         <div class="rule"></div>
         <div class="docs-menu">
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/aefc2a156365377.636581877e719.png">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8cb945128291019.61534c081c406.jpg">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a93ada149253155.62e3d4322bce0.png">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
             <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47558b159204401.6399d8cfe5520.png">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
+                <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
+                <span>Mar 23, 2023</span>
+            </a>
+            <a class="doc-menu" href="https://arxiv.org/pdf/2304.01520.pdf">
+                <img src="/images/asset-2.png">
                 <h1>EP Aquarii: a new picture of the circumstellar envelope</h1>
                 <span>Mar 23, 2023</span>
             </a>
         </div>
-        <a href="/physics"><button class="white-btn">Еще статьи</button></a>
+        <button class="white-btn">Больше технологий</button>
+
     </div>
 
-    <div class="citate-div">
-        <div class="rule"></div>
-        <h1>„Инвестиции в знания всегда дают наибольшую прибыль.“</h1>
-        <span>Бенджамин Франклин</span>
-    </div>
+    <div class="project-div">
+        <img src="/images/thechs.png">
+        <div class="project-div-text">
+            <h1>Бесценные патенты будущего</h1>
+            <div class="rule"></div>
+            <span>
+                Компания имеет патенты на новые технологии, которые могут помочь улучшить жизнь людей в различных
+                отраслях, таких как жизнеобеспечение, транспорт, вооружение и аграрная промышленность. Технологии могут
+                повысить эффективность производства, снизить затраты на энергию и уменьшить воздействие на окружающую
+                среду. В области жизнеобеспечения, компания может предложить новые методы лечения и диагностики
+                заболеваний, а в области транспорта — новые методы снижения выбросов и повышения безопасности на
+                дорогах. В сфере вооружения, компания может предложить новые методы защиты и повышения мощности оружия,
+                а в аграрной промышленности — новые методы улучшения урожайности и снижения вредных воздействий на
+                растения. Организация имеет большой потенциал для создания технологий, которые могут значительно
+                улучшить качество жизни людей в различных отраслях.
+            </span>
+            <button class="white-btn">О патентах</button>
+        </div>
+    </div> -->
+
 
 
 </body>
-
-<script>
-    $(document).ready(async function () {
-        let i = 0;
-        $("#pause-btn").on("click", function () {
-            if (i == 0) {
-                $("#pause-btn").text("Продолжить")
-                $("#video-intro-bg").trigger('pause');
-                i = 1;
-            } else {
-                $("#video-intro-bg").trigger('play');
-                $("#pause-btn").text("На паузу")
-                i = 0;
-            }
-        })
-    });
-
-</script>
 
 </html>

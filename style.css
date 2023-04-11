@@ -1,16 +1,20 @@
 :root {
     --font: 'Raleway', sans-serif;
-    --primary-color: rgb(255, 255, 255);
+    --primary-color: rgb(0, 0, 0);
+    --primary-color-footer: rgb(0, 0, 0);
     --primary-color-invert: rgb(255, 255, 255);
-    --secondary-color: rgb(0, 0, 0);
-    --secondary-color-footer: rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+    --secondary-color-footer: rgb(255, 255, 255);
     --header-primary-top-color: rgb(255, 255, 255);
-    --header-primary-scroll-color: rgb(255, 255, 255);
+    --header-primary-scroll-color: rgb(0, 0, 0);
     --header-secondary-top-color: rgba(0, 0, 0, 0);
-    --header-secondary-scroll-color: rgb(0, 0, 0);
+    --header-secondary-scroll-color: rgb(255, 255, 255);
+    --header-primary-top-color-alt: rgb(136, 136, 136);
 
     --header-primary: var(--header-primary-top-color);
     --header-secondary: var(--header-secondary-top-color);
+
+    --serif: 'Noto Serif Display', ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 }
 
 html {
@@ -59,7 +63,7 @@ header {
 }
 
 .header-in-2 a svg {
-    width: 24px;
+    width: 26px;
     transition: fill 0.3s;
     fill: var(--header-primary);
 }
@@ -68,6 +72,7 @@ header {
     display: flex;
     align-items: center;
     gap: 24px;
+    font-size: 18px;
 }
 
 .menu-text {
@@ -77,7 +82,7 @@ header {
 }
 
 .menu-text:hover {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--header-primary);
     cursor: pointer;
 }
 
@@ -91,6 +96,7 @@ header {
     max-width: 130px;
     display: block;
 }
+
 .logo-img path {
     transition: fill 0.3s;
     fill: var(--header-primary);
@@ -133,7 +139,7 @@ header {
 
 .intro-text-in h1 {
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 48px;
     color: var(--primary-color-invert)
 }
@@ -145,59 +151,9 @@ header {
     color: var(--primary-color-invert)
 }
 
-button {
-    width: fit-content;
-    padding: 4px 12px;
-    border: 2px solid var(--primary-color);
-    background-color: transparent;
-    font-family: var(--font);
-    color: var(--primary-color);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.invert-btn {
-    border: 2px solid var(--primary-color-invert);
-    background-color: transparent;
-    font-family: var(--font);
-    color: var(--primary-color-invert);
-}
-
-.invert-btn:hover {
-    cursor: pointer;
-    background-color: var(--primary-color-invert);
-    color: var(--primary-color);
-}
-
-.pause-btn {
-    width: fit-content;
-    padding: 6px 14px;
-    border: none;
-    background-color: var(--secondary-color);
-    font-family: var(--font);
-    color: var(--primary-color);
-    font-size: 16px;
-    font-weight: 400;
-    position: absolute;
-    bottom: 40px;
-    right: calc(max(100vw - 1504px, 0px)/2 + 32px);
-}
-
-.pause-btn:hover {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
 .docs-div {
     max-width: calc(1504px - 64px);
-    padding: 32px;
+    padding: 64px 32px 32px 32px;
     padding-bottom: 64px;
 }
 
@@ -208,26 +164,30 @@ button:hover {
 }
 
 .header-docs h1 {
+    font-size: 36px;
     margin: 0;
 }
 
 .header-docs span {
-    max-width: 400px;
+    max-width: 50%;
     text-align: right;
+    font-size: 18px;
 }
 
 .rule {
     margin: 20px 0px 32px 0px;
-    height: 2px;
+    height: 1px;
     width: -webkit-fill-available;
     max-width: calc(1504px - 64px);
     background-color: var(--primary-color);
 }
 
 .docs-menu {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 32x;
+    grid-column-gap: 32px;
     gap: 32px;
-    overflow-x: scroll;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -244,51 +204,36 @@ button:hover {
 }
 
 .doc-menu {
-    min-width: 240px;
+    width: -webkit-fill-available;
     text-decoration: none;
     color: var(--primary-color);
+    display: block;
 }
 
 .doc-menu img {
-    width: -webkit-fill-available;
+    display: block;
+    width: calc(min(100vw - 32*5px, 1504px - 32*5px)/4);
 }
 
 .doc-menu h1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .doc-menu span {
     font-size: 16px;
-    font-weight: 200;
-}
-
-.white-btn {
-    width: fit-content;
-    padding: 4px 12px;
-    border: 2px solid var(--primary-color);
-    background-color: transparent;
-    font-family: var(--font);
-    color: var(--primary-color);
-    font-size: 16px;
     font-weight: 400;
-    margin-top: 32px;
-}
-
-.white-btn:hover {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
 }
 
 .project-div {
-    padding: 32px;
+    padding: 64px 32px 32px 32px;
     display: flex;
 }
 
 .project-div img {
-    max-width: calc(min(620px, 50%));
-    height: intrinsic;
+    height: calc(min(1504px - 64px, 100vw - 64px)/2);
+    width: calc(min(1504px - 64px, 100vw - 64px)/2);
+    object-fit: cover;
 }
 
 .project-div-text {
@@ -303,7 +248,70 @@ button:hover {
 }
 
 .project-div-text h1 {
+    font-size: 36px;
     margin: 0;
+}
+
+.project-div-text span {
+    font-size: 18px;
+}
+
+
+.header-intro {
+    padding: 32px;
+    background-color: var(--header-secondary-top-color);
+}
+
+.header-intro div {
+    display: flex;
+    gap: 32px;
+    margin-top: 72px;
+    margin-bottom: 54px;
+    align-items: center;
+}
+
+.header-intro div h1 {
+    font-size: 48px;
+    width: 50%;
+    color: var(--header-primary-top-color)
+}
+
+.header-intro div h2 {
+    font-size: 24px;
+    font-weight: 400;
+    width: 50%;
+    color: var(--header-primary-top-color)
+}
+
+.header-intro img {
+    width: calc(min(1504px - 64px, 100vw - 64px));
+    height: calc(min(1504px - 64px, 100vw - 64px)/2);
+    object-fit: cover;
+}
+
+.header-intro span {
+    font-size: 14px;
+    display: block;
+    margin: 32px 0 32px 0;
+    color: var(--header-primary-top-color-alt);
+    font-style: italic;
+}
+
+.citate-div {
+    padding: 64px 32px 64px 32px;
+}
+
+.citate-div h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 38px;
+}
+
+.citate-div span {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 18px;
 }
 
 footer {
@@ -314,11 +322,13 @@ footer {
     padding-bottom: 64px;
     background-color: var(--secondary-color-footer);
     margin: 64px 0px 0px 0px;
+    color: var(--primary-color-footer);
 }
 
 footer .rule {
     margin-bottom: 12px;
     margin-top: 32px;
+    background-color: var(--primary-color-footer);
 }
 
 .logo-footer-href {
@@ -329,7 +339,7 @@ footer .rule {
 
 .logo-footer {
     width: 140px;
-    fill: var(--primary-color);
+    fill: var(--primary-color-footer);
 }
 
 .website-map {
@@ -346,12 +356,18 @@ footer .rule {
 }
 
 .map-menu {
-    display: grid;
-    gap: 8px;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+
 }
 
 .map-menu span {
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.map-menu a {
+    color: var(--primary-color-footer);
 }
 
 .footer-info {
@@ -378,20 +394,23 @@ footer .rule {
 }
 
 .socials-links a,
-.docs-and-title a {
+.docs-and-title a,
+.map-menu a {
     border-bottom: 1px solid transparent;
     height: fit-content;
     width: fit-content;
+    color: var(--primary-color-footer);
 }
 
 .socials-links a:hover,
-.docs-and-title a:hover {
-    border-bottom: 1px solid var(--primary-color);
+.docs-and-title a:hover,
+.map-menu a:hover {
+    border-bottom: 1px solid var(--primary-color-footer);
     cursor: pointer;
 }
 
 .lines {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-footer);
 }
 
 .bg-primary {
@@ -399,11 +418,137 @@ footer .rule {
 }
 
 .bg-primary-2 {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-footer);
     height: 98px;
 }
 
+button {
+    width: fit-content;
+    padding: 4px 12px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.menu-btn {
+    width: fit-content;
+    padding: 4px 12px;
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--header-primary);
+    font-size: 18px;
+    font-weight: 400;
+    display: none;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+    background-color: var(--header-primary);
+    color: var(--header-secondary);
+    border: 0px solid transparent;
+}
+
+.invert-btn {
+    border: 2px solid var(--primary-color-invert);
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--primary-color-invert);
+    font-size: 18px;
+}
+
+.invert-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-invert);
+    color: var(--primary-color);
+}
+
+.pause-btn {
+    width: fit-content;
+    padding: 6px 14px;
+    border: none;
+    background-color: var(--secondary-color);
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 40px;
+    right: calc(max(100vw - 1504px, 0px)/2 + 32px);
+}
+
+.pause-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.white-btn {
+    width: fit-content;
+    padding: 4px 12px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 32px;
+}
+
+.white-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1100px) {
+    .docs-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 32x;
+        grid-column-gap: 32px;
+        gap: 32px;
+    }
+
+    .doc-menu img {
+        width: calc(min((100vw - 32px*4), 1504px - 32px*4)/3);
+        display: block;
+    }
+}
+
 @media screen and (max-width: 920px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .header-menu {
+        justify-content: space-between;
+        display: flex;
+        width: -webkit-fill-available;
+    }
+
+    .docs-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 32x;
+        grid-column-gap: 32px;
+        gap: 32px;
+    }
+
+    .doc-menu img {
+        width: calc(min((100vw - 32px*3), 1504px - 32px*3)/2);
+        display: block;
+    }
+
     .menu-text {
         display: none;
     }
@@ -428,7 +573,8 @@ footer .rule {
     }
 
     .project-div img {
-        max-width: -webkit-fill-available;
+        width: calc(min(1504px - 64px, 100vw - 64px));
+        height: calc(min(1504px - 64px, 100vw - 64px));
         height: auto;
     }
 
@@ -461,13 +607,51 @@ footer .rule {
 
     .intro-text-in h1 {
         margin-bottom: 0;
-        font-weight: 600;
-        font-size: 32px;
+        font-size: 42px;
     }
-    
+
     .intro-text-in h2 {
         margin: 20px 0px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 21px;
     }
+
+    .header-intro div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .header-intro div h1 {
+        width: auto;
+        margin: 0;
+    }
+
+    .header-intro div h2 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .docs-menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 32x;
+        grid-column-gap: 32px;
+        gap: 32px;
+    }
+
+    .doc-menu {
+        width: calc(min((100vw - 32px*2), 1504px - 32px*2));
+        display: block;
+    }
+
+    .doc-menu img {
+        width: calc(min((100vw - 32px*2), 1504px - 32px*2));
+        display: block;
+    }
+
 }
