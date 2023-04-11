@@ -162,6 +162,24 @@
 
 </body>
 
+<style>
+    :root {
+        --btn-primary: white;
+        --btn-background: transparent;
+        --btn-primary-hover: black;
+        --btn-background-hover: white;
+    }
+
+    .menu-btn {
+        color: var(--btn-primary);
+        background-color: var(--btn-background);
+    }
+
+    .menu-btn:hover {
+        background-color: var(--btn-background-hover);
+        color: var(--btn-primary-hover);
+    }
+</style>
 <script>
     $(document).ready(async function () {
         let i = 0;
@@ -174,6 +192,21 @@
                 $("#video-intro-bg").trigger('play');
                 $("#pause-btn").text("На паузу")
                 i = 0;
+            }
+        })
+
+        $(document).on("scroll", function () {
+            if ($(document).scrollTop() >= 240) {
+                $(":root").css("--btn-primary", "black");
+                $(":root").css("--btn-background", "transparent");
+                $(":root").css("--btn-primary-hover", "white");
+                $(":root").css("--btn-background-hover", "black");
+            } else {
+                $(":root").css("--btn-primary", "white");
+                $(":root").css("--btn-background", "transparent");
+                $(":root").css("--btn-primary-hover", "black");
+                $(":root").css("--btn-background-hover", "white");
+
             }
         })
     });
