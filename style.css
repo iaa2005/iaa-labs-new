@@ -459,6 +459,67 @@ button:hover {
     border: 0px solid transparent;
 }
 
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: calc(100vw - 64px);
+    height: calc(100vh - 40px);
+    padding: 20px 32px;
+    background-color: var(--header-secondary-scroll-color);
+    z-index: 1;
+    gap: 4px;
+}
+
+.mobile-menu .menu-text,
+.mobile-menu .header-in-2 {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.mobile-menu .header-in-2 a {
+    text-decoration-line: none;
+}
+
+.mobile-menu .header-in-2 {
+    margin-top: auto;
+}
+
+.logo-href-and-logo {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.mobile-menu .logo-img path,
+.mobile-menu .img-social path {
+    fill: var(--header-primary-scroll-color);
+}
+
+.mobile-menu .menu-text {
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s;
+    color: var(--header-primary-scroll-color);
+}
+
+.mobile-menu .menu-text:hover {
+    border-bottom: 1px solid var(--header-primary-scroll-color);
+    cursor: pointer;
+}
+
+.mobile-menu .menu-btn {
+    color: var(--header-primary-scroll-color);
+}
+
+.mobile-menu .menu-btn:hover {
+    cursor: pointer;
+    background-color: var(--header-primary-scroll-color);
+    color: var(--header-secondary-scroll-color);
+}
+
 .invert-btn {
     border: 2px solid var(--primary-color-invert);
     background-color: transparent;
@@ -527,6 +588,10 @@ button:hover {
 }
 
 @media screen and (max-width: 920px) {
+    /* .mobile-menu {
+        display: flex;
+    } */
+
     .menu-btn {
         display: block;
     }
@@ -576,7 +641,8 @@ button:hover {
     .project-div img {
         width: calc(min(1504px - 64px, 100vw - 64px));
         height: calc(min(1504px - 64px, 100vw - 64px));
-        max-width: -webkit-fill-available;;
+        max-width: -webkit-fill-available;
+        ;
         max-height: -webkit-fill-available;
     }
 
@@ -609,7 +675,7 @@ button:hover {
 
     .intro-text-in h1 {
         margin-bottom: 0;
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .intro-text-in h2 {
