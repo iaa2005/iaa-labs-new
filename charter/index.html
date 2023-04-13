@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Устав компании</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Передаем знания и делаем открытия для будущего поколения">
+    <meta property="og:title" content="Устав компании">
+    <meta property="og:description" content="Передаем знания и делаем открытия для будущего поколения">
+    <meta property="og:image" content="https://iaa2005.tk/images/iaa-labs.jpeg">
+    <meta property="og:image:alt"
+        content="IAA Labs logo on the background of a spacecraft on an exoplanet where a strong storm is raging.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iaa2005">
+    <meta name="twitter:image" content="https://iaa2005.tk/images/iaa-labs.jpeg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/showdown.min.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
+    <style>
+        :root {
+            --font: 'Raleway', sans-serif;
+            --primary-color: rgb(0, 0, 0);
+            --primary-color-footer: rgb(255, 255, 255);
+            --primary-color-invert: rgb(255, 255, 255);
+            --secondary-color: rgb(255, 255, 255);
+            --secondary-color-footer: rgb(13, 64, 234);
+            --header-primary-top-color: rgb(255, 255, 255);
+            --header-primary-scroll-color: rgb(0, 0, 0);
+            --header-secondary-top-color: rgb(13, 64, 234);
+            --header-secondary-scroll-color: rgb(255, 255, 255);
+            --header-primary-top-color-alt: rgb(187, 197, 231);
+
+            --header-primary: var(--header-primary-top-color);
+            --header-secondary: var(--header-secondary-top-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <div style="height: 64px"></div>
+
+    <div class="header-intro simple-intro">
+        <div>
+            <h1>Устав</h1>
+            <h2>Правила компании, по которым она действует.</h2>
+        </div>
+        <!-- <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/16559d38225237.57598180de392.jpg"> -->
+        <div>
+            <img src="/images/pattern-1-01.svg">
+        </div>
+    </div>
+    
+    <div class="meta-data-div">
+        <div class="rule"></div>
+        <div class="datas">
+            <div class="data">
+                <h1>Опубликовано</h1>
+                <a>Апрель 13, 2023</a>
+            </div>
+            <div class="data">
+                <h1>Автор</h1>
+                <a href="https://github.com/iaa2005">Иванов Александр</a>
+            </div>
+            <div class="data">
+                <a href="/about">О компании</a>
+            </div>
+        </div>
+    </div>
+    <div class="project-div section">
+
+    </div>
+</body>
+
+<script>
+    $.get(`/charter/README.md`, function(data) {
+        let converter = new showdown.Converter({
+            metadata: true
+        });
+        let html_code = converter.makeHtml(data);
+        let metadata = converter.getMetadata(false);
+
+        $(".section").append(html_code);
+    });
+</script>
+
+</html>

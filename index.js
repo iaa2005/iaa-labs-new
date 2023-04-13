@@ -95,27 +95,26 @@ $(document).ready(async function () {
                 </a>
                 <div class="map-menu-out">
                     <div class="map-menu">
-                        <span>Исследования</span>
-                        <a>Data Science</a>
-                        <a>Разработки</a>
-                        <a>Технологии</a>
+                        <a href="/research"><span>Исследования</span></a>
+                        <a href="/research#datascience">Data Science</a>
+                        <a href="/research#projects">Проекты</a>
+                        <a href="/research#articles">Статьи</a>
                     </div>
                     <div class="map-menu">
-                        <span>Астрономия</span>
-                        <a>Статьи</a>
-                        <a>Задачи</a>
-                        <a>Межнар</a>
+                        <a href="/astronomy"><span>Астрономия</span></a>
+                        <a href="/research#articles">Статьи</a>
+                        <a href="/research#problems">Задачи</a>
+                        <a href="/research#international">Межнар</a>
                     </div>
                     <div class="map-menu">
-                        <span>Физика</span>
-                        <a>Статьи</a>
-                        <a>Задачи</a>
-                        <a>Межнар</a>
+                        <a href="/physics"><span>Физика</span></a>
+                        <a href="/physics#articles">Статьи</a>
+                        <a href="/physics#problems">Задачи</a>
+                        <a href="/physics#international">Межнар</a>
                     </div>
                     <div class="map-menu">
-                        <span>Компания</span>
-                        <a>О нас</a>
-                        <a>Устав компании</a>
+                        <a href="/about"><span>Компания</span></a>
+                        <a href="/charter">Устав компании</a>
                     </div>
                 </div>
             </div>
@@ -123,8 +122,8 @@ $(document).ready(async function () {
             <div class="footer-info">
                 <div class="docs-and-title">
                     <h1>IAA Labs © 2022–2023</h1>
-                    <a href="">Terms & policies</a>
-                    <a href="">Privacy policy</a>
+                    <a href="/terms">Условия использования</a>
+                    <a href="/privacy-policy">Политика конфиденциальности</a>
                 </div>
                 <div class="socials-links">
                     <a href="https://twitter.com/iaa2005">Twitter</a>
