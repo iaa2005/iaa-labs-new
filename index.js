@@ -96,21 +96,21 @@ $(document).ready(async function () {
                 <div class="map-menu-out">
                     <div class="map-menu">
                         <a href="/research"><span>Исследования</span></a>
-                        <a href="/research#datascience">Data Science</a>
-                        <a href="/research#projects">Проекты</a>
-                        <a href="/research#articles">Статьи</a>
+                        <a href="/research/#datascience">Data Science</a>
+                        <a href="/research/#projects">Проекты</a>
+                        <a href="/research/#articles">Статьи</a>
                     </div>
                     <div class="map-menu">
                         <a href="/astronomy"><span>Астрономия</span></a>
-                        <a href="/research#articles">Статьи</a>
-                        <a href="/research#problems">Задачи</a>
-                        <a href="/research#international">Межнар</a>
+                        <a href="/astronomy/#articles">Статьи</a>
+                        <a href="/astronomy/#problems">Задачи</a>
+                        <a href="/astronomy/#international">Межнар</a>
                     </div>
                     <div class="map-menu">
                         <a href="/physics"><span>Физика</span></a>
-                        <a href="/physics#articles">Статьи</a>
-                        <a href="/physics#problems">Задачи</a>
-                        <a href="/physics#international">Межнар</a>
+                        <a href="/physics/#articles">Статьи</a>
+                        <a href="/physics/#problems">Задачи</a>
+                        <a href="/physics/#international">Межнар</a>
                     </div>
                     <div class="map-menu">
                         <a href="/about"><span>Компания</span></a>
