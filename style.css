@@ -908,4 +908,8 @@ button:hover {
     .simple-intro img {
         height: calc(min(1504px - 32px, 100vw - 23px));
     }
+
+    .citate-div h1 {
+        font-size: 32px;
+    }
 }
